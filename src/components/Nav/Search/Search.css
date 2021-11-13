@@ -1,0 +1,75 @@
+.search-div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.search-result {
+    position: absolute;
+    top: 40px;
+    width: 90%;
+    height: auto;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+.search-result::-webkit-scrollbar{
+    width: 5px;
+}
+
+.search-result::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.search-result::-webkit-scrollbar-track::-webkit-scrollbar-track{
+    background: red;
+}
+
+.parent-search-bar {
+    display: flex;
+    border: 3px solid white;
+    border-radius: 25px;
+    padding: 2px 5px;
+    width: 200px;
+    height: 20px;
+}
+
+.search-bar {
+    background: transparent;
+    border: 0;
+    margin: 0 5px;
+    padding: 3px 0;
+    width: 100%;
+}
+
+.search-bar::placeholder {
+    color: #ffffff;
+    opacity: 0.5;
+}
+
+.search-result-p {
+    margin: 15px auto;
+    padding-bottom: 5px;
+}
+
+.search-result-p:hover {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+@media (max-width: 640px) {
+    .search-div {
+        width: 100%;
+    }
+}

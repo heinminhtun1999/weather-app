@@ -1,0 +1,23 @@
+.wind-content {
+    padding: 10%;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.wind-content > * {
+    margin: 10px 0;
+}
+
+.wind-title {
+    display: flex;
+}
+
+.wind-title > p {
+    margin-left: 5px;
+}
+
+.wind-icon {
+    width: 18px;
+    height: 18px;
+    filter: invert();
+}

@@ -1,0 +1,33 @@
+.pressure-content {
+    padding: 10%;
+    padding-top: 5px;
+}
+
+.pressure-content > * {
+    margin: 10px 0;
+}
+
+.pressure-title {
+    display: flex;
+}
+
+.pressure-title > p {
+    margin-left: 5px;
+}
+
+.pressure-icon {
+    width: 18px;
+    height: 18px;
+    filter: invert();
+}
+
+.pressure-value {
+    margin-top: 15px;
+    font-size: 2.2em;
+}
+
+@media (min-width: 689px) and (max-width: 1024px) {
+    .pressure-value {
+        margin-top: 30px;
+    }
+}

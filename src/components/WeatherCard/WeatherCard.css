@@ -1,0 +1,81 @@
+.weather-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.cards {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin: 5px auto;
+    overflow: hidden;
+}
+
+.card.loading {
+    background: rgba(151, 145, 145, 0.2);
+    position: relative;
+}
+
+.card.loading::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateZ(0);
+    animation: loadingAfterAnimation infinite 1.5s linear;
+}
+
+.subcard.card.loading::after {
+    width: 120px;
+}
+
+@media (max-width: 1024px) {
+    .weather-card {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .cards {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        width: 90%;
+        margin-top: 0;
+    }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1360px) {
+    .cards {
+        width: 80%;
+    }
+}
+
+@keyframes loadingAfterAnimation {
+    from {
+        left: -20%;
+    }
+
+    to {
+        left: 120%;
+    }
+}

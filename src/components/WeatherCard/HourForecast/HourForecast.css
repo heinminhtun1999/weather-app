@@ -1,0 +1,28 @@
+.hour-forecast {
+    width: 100%;
+    height: 150px;
+}
+
+.hour-forecast-content {
+    padding-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.hour-forecast-item {
+    margin: 0 20px;
+}
+
+.hour-weather-icon {
+    width: 70px;
+    height: 70px;
+}
+
+::-webkit-scrollbar {
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 20px;
+}

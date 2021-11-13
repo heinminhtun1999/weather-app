@@ -1,0 +1,53 @@
+.humidity-content {
+    padding: 10%;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.humidity-content > * {
+    margin: 10px 0;
+    width: 100%;
+}
+
+.humidity-title {
+    display: flex;
+}
+
+.humidity-title > p {
+    margin-left: 5px;
+}
+
+.humidity-icon {
+    width: 18px;
+    height: 18px;
+    filter:  brightness(0) invert(1);
+}
+
+.humidity-content h1 {
+    font-size: 2.3em;
+}
+
+.humidity-content p {
+    margin-bottom: 0;
+}
+
+.humidity-content .dew-point {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+@media (max-width: 500px) {
+    .humidity-content h1 {
+        font-size: 2em;
+    }
+}
+
+/* for nest hub max */
+
+@media (max-width: 1280px) and (max-height: 800px) {
+    .humidity-content h1 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+}

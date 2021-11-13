@@ -1,0 +1,29 @@
+.visibility-content {
+    padding: 10%;
+    padding-top: 5px;
+    height: 100%;
+}
+
+.visibility-content > * {
+    margin: 10px 0;
+}
+
+.visibility-title {
+    display: flex;
+    align-items: center;
+}
+
+.visibility-title > p {
+    margin-left: 5px;
+}
+
+.visibility-value-parent {
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visibility-value {
+    font-size: 2em;
+}

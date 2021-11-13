@@ -1,0 +1,61 @@
+.sun-content {
+    padding: 10%;
+    padding-top: 5px;
+    text-align: left;
+}
+
+.sun-content > * {
+    margin: 9px 0;
+}
+
+.icon {
+    filter: invert();
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.sunrise, .sunset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sunset {
+    margin-top: 22px;
+}
+
+.sunrise p, .sunset p {
+    margin-top: 2px;
+}
+
+.sunrise h2, .sunset h2 {
+    width: 100%;
+}
+
+/* for nest hub max */
+
+@media (max-width: 1280px) and (max-height: 800px) {
+    .sunrise h2, .sunset h2 {
+        font-size: 1.3em;
+    }
+    .sunset {
+        margin-top: 25px;
+    }
+    .icon {
+        margin-right: 0;
+    }
+}
+
+/* for ipad pro */
+@media (max-width: 1024px) and (max-height: 1366px) and (min-width: 1024px) and (min-height: 600px){
+    .sun-content {
+        display: flex;
+        align-items: center;
+    }
+    .sun-content > * {
+        margin: 0;
+    }
+    .sunrise h2, .sunset h2 {
+        margin-top: 10px;
+    }
+}
