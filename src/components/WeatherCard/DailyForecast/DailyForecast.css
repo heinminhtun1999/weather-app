@@ -30,7 +30,7 @@
     width: 100%;
 }
 
-.daily-weather-temp-bar {
+.daily-temp-bar {
     width: 5px;
     height: 60%;
     background: linear-gradient(to bottom, #00FF00, #ff0000);

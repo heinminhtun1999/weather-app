@@ -22,7 +22,7 @@ const DailyForecast = (props) => {
                         </div>
                         <div className="daily-weather-right">
                             <p>{dailyWeather[0].temp.min}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
-                            <div className="daily-weather-temp-bar"></div>
+                            <div className="daily-temp-bar"></div>
                             <p>{dailyWeather[0].temp.max}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@ const DailyForecast = (props) => {
                                 </div>
                                 <div className="daily-weather-right">
                                     <p>{data.temp.min}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
-                                    <div className="daily-weather-temp-bar"></div>
+                                    <div className="daily-temp-bar"></div>
                                     <p>{data.temp.max}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
                                 </div>
                             </div>

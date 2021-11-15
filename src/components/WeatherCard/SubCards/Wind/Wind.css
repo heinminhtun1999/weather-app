@@ -1,19 +1,23 @@
 .wind-content {
-    padding: 10%;
-    padding-top: 5px;
     text-align: left;
-}
-
-.wind-content > * {
-    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .wind-title {
-    display: flex;
+    width: 100%;
 }
 
 .wind-title > p {
     margin-left: 5px;
+}
+
+.wind-values {
+    margin-top: -4px;
+}
+
+.wind-values > p {
+    margin: 10px 0;
 }
 
 .wind-icon {

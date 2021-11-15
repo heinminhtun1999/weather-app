@@ -39,8 +39,6 @@ const convertTimeZone = (timestamp, timeZone) => {
   return { date, time, timeNoMinute }
 }
 
-convertTimeZone(1636529428, "Asia/Yangon")
-
 export const fetchWeather = (args) => (dispatch) => {
   const { lat, lon, units, api } = args;  
 
@@ -48,6 +46,7 @@ export const fetchWeather = (args) => (dispatch) => {
   fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${api}&units=${units}`)
     .then(res => res.json())
     .then(weathers => {
+      console.log(weathers);
       const current = weathers.current;
       const daily = weathers.daily;
       const hourly = weathers.hourly;

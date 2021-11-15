@@ -1,15 +1,5 @@
 .uv-content {
     text-align: left;
-    padding: 10%;
-    padding-top: 5px;
-}
-
-.uv-content > * {
-    margin: 10px 0;
-}
-
-.uv-title {
-    display: flex;
 }
 
 .uv-title p {

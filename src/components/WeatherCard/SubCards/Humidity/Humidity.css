@@ -1,16 +1,5 @@
 .humidity-content {
-    padding: 10%;
-    padding-top: 5px;
     text-align: left;
-}
-
-.humidity-content > * {
-    margin: 10px 0;
-    width: 100%;
-}
-
-.humidity-title {
-    display: flex;
 }
 
 .humidity-title > p {
@@ -35,7 +24,6 @@
     font-size: 13px;
     margin-top: 20px;
 }
-
 
 @media (max-width: 500px) {
     .humidity-content h1 {

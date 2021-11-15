@@ -4,10 +4,10 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 
 const HourForecast = (props) => {
 
-    const { isPending_wt, hourlyWeather, units, currentWeather } = props;
+    const { isPending_wt, hourlyWeather, currentWeather, units } = props;
 
     const excludeFirst = hourlyWeather.filter((a, i) => {
-        return i > 0;
+        return i > 0 && i < 24;
     })
 
     return (
@@ -16,8 +16,8 @@ const HourForecast = (props) => {
                     <ScrollContainer className="hour-forecast-content" key="0">
                     <div className="hour-forecast-item noselect">
                         <p className="time">Now</p>
-                        <img src={`https://openweathermap.org/img/wn/${hourlyWeather[0].weather.icon}@4x.png`} alt="hour-weather-icon" className="hour-weather-icon" />
-                        <p className="hour-forecast-temp">{hourlyWeather[0].temp}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
+                        <img src={`https://openweathermap.org/img/wn/${currentWeather.weather.icon}@4x.png`} alt="hour-weather-icon" className="hour-weather-icon" />
+                        <p className="hour-forecast-temp">{currentWeather.temp}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
                     </div>
                     {excludeFirst.map((data, index) => {
                         return (

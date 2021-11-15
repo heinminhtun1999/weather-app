@@ -10,8 +10,8 @@ const Visibility = (props) => {
     return (
         <div className={`visibility subcard card ${isPending_wt && "loading"}`}>
             {!isPending_wt &&
-                <div className="visibility-content">
-                    <div className="visibility-title">
+                <div className="visibility-content subcard-content">
+                    <div className="visibility-title subcard-title">
                         <VisibilityIcon style={{ fontSize: "18px" }} />
                         <p>VISIBILITY</p>
                     </div>

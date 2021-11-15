@@ -9,8 +9,8 @@ const Humidity = (props) => {
     return (
         <div className={`humidity subcard card ${isPending_wt && "loading"}`}>
             {!isPending_wt &&
-                <div className="humidity-content">
-                    <div className="humidity-title">
+                <div className="humidity-content subcard-content">
+                    <div className="humidity-title subcard-title">
                         <img src={humidityIcon} alt="humidity-icon" className="humidity-icon" />
                         <p>HUMIDITY</p>
                     </div>

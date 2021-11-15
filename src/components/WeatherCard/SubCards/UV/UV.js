@@ -11,8 +11,8 @@ const UV = (props) => {
     return (
         <div className={`uv subcard card ${isPending_wt && "loading"}`}>
              { !isPending_wt && 
-                    <div className="uv-content">
-                        <div className="uv-title">
+                    <div className="uv-content subcard-content">
+                        <div className="uv-title subcard-title">
                             <WbSunnyIcon style={{fontSize: "18px"}}/>
                             <p>UV INDEX</p>
                         </div>

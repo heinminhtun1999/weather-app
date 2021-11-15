@@ -1,14 +1,9 @@
 .pressure-content {
     padding: 10%;
     padding-top: 5px;
-}
-
-.pressure-content > * {
-    margin: 10px 0;
-}
-
-.pressure-title {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .pressure-title > p {
@@ -22,12 +17,5 @@
 }
 
 .pressure-value {
-    margin-top: 15px;
     font-size: 2.2em;
-}
-
-@media (min-width: 689px) and (max-width: 1024px) {
-    .pressure-value {
-        margin-top: 30px;
-    }
 }

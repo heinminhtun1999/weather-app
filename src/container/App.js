@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { usePosition } from 'use-position';
 import { connect } from "react-redux";
-import { reverseGeocode, setCities, setSearchField, fetchWeather } from "../actions";
+import { reverseGeocode, setSearchField, fetchWeather } from "../actions";
 import './App.css';
 import Nav from "../components/Nav/Nav";
 import WeatherCard from "../components/WeatherCard/WeatherCard";
 import cities from "./citylist.json";
 import { api } from "../api";
+import ReactLoading from 'react-loading';
 
 const mapStateToProps = (state) => {
   return { 
@@ -43,6 +44,7 @@ const App = (props) => {
     const lat = e.target.dataset.lat;
     const lon = e.target.dataset.lon;
     setPosition({lat, lon})
+    handleChange({target: {value: ""}})
   }
 
   const unitsChange = (e) => {
@@ -64,7 +66,13 @@ const App = (props) => {
       fetchWeather({lat: position.lat, lon: position.lon, units, api})
       reverseGeocode(position.lat, position.lon, api)
     }
-  },[latitude, longitude, position.lat, position.lon, units])
+    if(error === "User denied geolocation prompt") {
+      alert("Please allow location access to use this app.")
+    }
+
+    console.log(error);
+
+  },[latitude, longitude, position.lat, position.lon, units, error])
 
   const formatCitiesData = cities.map(city => {
     return {
@@ -99,12 +107,14 @@ const App = (props) => {
         RGCity={RGCity}
         units={units}
         />
-        <p className="copyright">Copy Right &copy; 2021</p>
+        <p className="copyright">Source code: <a href="https://github.com/heinminhtun1999/weather-app">https://github.com/heinminhtun1999/weather-app</a></p>
       </div>
     )  
   } else {
     return (
-      <div>Loading</div>
+      <div className="loading-screen">
+        <ReactLoading type={"bars"} color={"white"} height={'20%'} width={'20%'}/>
+      </div>
     )
   }
 

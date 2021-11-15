@@ -9,8 +9,8 @@ const Pressure = (props) => {
     return (
         <div className={`pressure subcard card ${isPending_wt && "loading"}`}>
             {!isPending_wt &&
-                <div className="pressure-content">
-                    <div className="pressure-title">
+                <div className="pressure-content subcard-content">
+                    <div className="pressure-title subcard-title">
                         <img src={pressure} alt="pressure-icon" className="pressure-icon" />
                         <p>PRESSURE</p>
                     </div>

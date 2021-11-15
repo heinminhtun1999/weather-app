@@ -7,23 +7,20 @@ const MainCard = (props) => {
 
     return (
         <div className={`main-card card ${isPending_wt && "loading"}`}>
-                { !isPending_wt && 
-                    <div className="main-card-contents">
-                        <div className="main-card-left">
-                            <h1 className="current-city-name">{RGCity}</h1>
-                            <h2 className="current-main-temp">{currentWeather.temp}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</h2>
-                            <p className="feels-like">Feels Like: {currentWeather.feels_like}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
-                            <span>L: {dailyWeather[0].temp.min}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</span>
-                            <span>H: {dailyWeather[0].temp.max}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</span>
-                        </div>
-                        <div className="main-card-right">
-                            <h1 className="weather-main">{currentWeather.weather.main}</h1>
-                            <h3 className="weather-main-desc">{currentWeather.weather.desc}</h3>
-                            <img className="main-current-weather-icon" src={`https://openweathermap.org/img/wn/${currentWeather.weather.icon}@4x.png`} alt="weather-icon"></img>
-                            <p className="current-cloud">Cloud: {currentWeather.clouds}%</p>
-                        </div>
-                    </div> 
-                }
+            {!isPending_wt &&
+                <div className="main-card-contents">
+                        <h1 className="current-city">{RGCity}</h1>
+                        <h1 className="current-main-temp">{currentWeather.temp}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</h1>
+                        <p className="feels-like">Feels Like: {currentWeather.feels_like}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
+                    <div className="current-main-temp-parent">
+                        <p className="current-weather-min-max ">{dailyWeather[0].temp.min}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
+                        <div className="current-temp-bar"></div>
+                        <p className="current-weather-min-max ">{dailyWeather[0].temp.max}{units === "standard" ? " K" : units === "imperial" ? "° F" : "° C"}</p>
+                    </div>
+                        <h2 className="weather-main-desc">{currentWeather.weather.desc}</h2>
+                        <p className="current-cloud">Cloud: {currentWeather.clouds}%</p>
+                </div>
+            }
         </div>
     )
 }

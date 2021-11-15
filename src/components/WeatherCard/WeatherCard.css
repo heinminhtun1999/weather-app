@@ -1,10 +1,9 @@
 .weather-card {
     width: 100%;
-    height: auto;
+    height: 65%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 80px;
+    /* margin-top: 50px; */
 }
 
 .cards {
@@ -61,6 +60,9 @@
         width: 90%;
         margin-top: 0;
     }
+    .weather-card {
+        height: auto;
+    }
 }
 
 
@@ -69,6 +71,16 @@
         width: 80%;
     }
 }
+
+/* for HDTV */
+
+@media (max-width:1920px) and (max-height: 1080px) {
+    .weather-card {
+        height: 60%;
+    }
+}
+
+/* loading animation */
 
 @keyframes loadingAfterAnimation {
     from {
