@@ -46,7 +46,6 @@ export const fetchWeather = (args) => (dispatch) => {
   fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${api}&units=${units}`)
     .then(res => res.json())
     .then(weathers => {
-      console.log(weathers);
       const current = weathers.current;
       const daily = weathers.daily;
       const hourly = weathers.hourly;
